@@ -10,6 +10,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ImagePicker } from "@ionic-native/image-picker";
+import { GalleryPage } from "../pages/gallery/gallery";
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    GalleryPage
   ],
   imports: [
     BrowserModule,
@@ -29,11 +32,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    GalleryPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    ImagePicker,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

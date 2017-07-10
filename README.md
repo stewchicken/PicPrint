@@ -24,3 +24,38 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+
+ionic cordova plugin add cordova-plugin-image-picker
+
+ionic cordova plugin add https://github.com/Telerik-Verified-Plugins/ImagePicker.git
+
+ionic generate page gallery
+
+add page into app.module.ts
+
+
+ionic link //choose PicPrint
+
+ionic upload
+
+question
+how to grant permission for this plugin?
+for example take photo, read photo from hand ware
+do i need add ios and android both platform together for same project
+if i want to publish to both platform
+or should i add two platform seperately then publish them seperately?
+
+Error: /home/yw/ionic2/PicPrint/src/pages/gallery/gallery.ts has a @IonicPage decorator, but it does not have a corresponding "NgModule" at /home/yw/ionic2/PicPrint/src/pages/gallery
+/gallery.module.ts
+
+Testing on Android is much easier and faster. To test on the device, simply plug it in, and run
+
+$ ionic cordova run android
+
+Simulator testing
+
+You can also test right in the simulator using the cordova commands from the previous chapter. For example, to test in the iOS simulator, run:
+
+$ ionic cordova build ios
+$ ionic cordova emulate ios
+
