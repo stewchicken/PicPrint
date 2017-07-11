@@ -31,13 +31,16 @@ export class GalleryPage {
 
     for (let i = 0; i < this.images.length; i += 2) {
 
-      this.grid[rowNum] = Array(2);
-
+      if (i + 2 <= this.images.length) {
+        this.grid[rowNum] = Array(2);
+      } else {
+        this.grid[rowNum] = Array(1);
+      }
       if (this.images[i]) {
         this.grid[rowNum][0] = this.images[i]
       }
 
-      if (i + 1 <= this.images.length) {
+      if (this.images[i + 1]) {
         this.grid[rowNum][1] = this.images[i + 1]
       }
 
