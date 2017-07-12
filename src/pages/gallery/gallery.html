@@ -9,9 +9,23 @@
 
 <ion-content>
   <ion-grid>
-    <ion-row *ngFor="let row of grid">
-      <ion-col width-50 *ngFor="let file_uri of row">
-      <img [src]="file_uri" />
+    <ion-row *ngFor="let row of grid; let i=index; trackBy:customTrackByi">
+      <ion-col width-50 *ngFor="let file_uri of row; let j=index; trackBy: customTrackByj">
+        <img [src]="file_uri" />
+        <ion-item>
+          <ion-label>Choose Frame</ion-label>
+          <ion-select (ngModel)="photoFrames[j]">
+            <ion-option value="8x10 Black">8x10 Black</ion-option>
+            <ion-option value="8x10 White">8x10 White</ion-option>
+            <ion-option value="8x10 Brown">8x10 Brown</ion-option>
+            <ion-option value="16x20 Black">16x20 Black</ion-option>
+            <ion-option value="16x20 White">16x20 White</ion-option>
+            <ion-option value="16x20 Brown">16x20 Brown</ion-option>
+            <ion-option value="24x36 Black">24x36 Black</ion-option>
+            <ion-option value="24x36 Brown">24x36 Brown</ion-option>
+            <ion-option value="24x36 White">24x36 White</ion-option>
+          </ion-select>
+        </ion-item>
       </ion-col>
     </ion-row>
   </ion-grid>

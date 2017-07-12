@@ -17,6 +17,7 @@ export class GalleryPage {
 
   images: Array<string>;
   grid: Array<Array<string>>;
+  photoFrames:Array<string>;
 
   constructor(
     private navCtrl: NavController,
@@ -26,6 +27,7 @@ export class GalleryPage {
   ionViewDidLoad() {
     this.images = this.navParams.get('images');
     this.grid = Array(Math.ceil(this.images.length / 2));
+    this.photoFrames=Array(this.images.length);
 
     let rowNum = 0;
 

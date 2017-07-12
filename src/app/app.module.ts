@@ -39,7 +39,7 @@ import { GalleryPage } from "../pages/gallery/gallery";
     StatusBar,
     SplashScreen,
     ImagePicker,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }
