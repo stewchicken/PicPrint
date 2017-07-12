@@ -11,6 +11,7 @@ import { GalleryPage } from '../gallery/gallery';
 export class HomePage {
 
   constructor(public navCtrl: NavController, private imagePicker: ImagePicker) {
+    
 
   }
 
