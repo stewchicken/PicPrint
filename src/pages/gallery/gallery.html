@@ -8,24 +8,25 @@
 
 
 <ion-content>
+  <button ion-button block (click)="send ()"> Send </button>
   <ion-grid>
     <ion-row *ngFor="let image_uri of images; let i=index ">
       <ion-col width-50>
-        <img [src]="image_uri" />
         <ion-item>
-          <ion-label>Select frame for {{i+1}} Photo</ion-label> <br/>
-          <ion-select  #selectValue (ionChange)="chooseFrame(i,selectValue.value)">
-            <ion-option value="8x10 Black">8x10 Black 10€</ion-option>
-            <ion-option value="8x10 White">8x10 White 10€</ion-option>
-            <ion-option value="8x10 Brown">8x10 Brown 10€</ion-option>
-            <ion-option value="16x20 Black">16x20 Black 15€</ion-option>
-            <ion-option value="16x20 White">16x20 White 15€</ion-option>
-            <ion-option value="16x20 Brown">16x20 Brown 15€</ion-option>
-            <ion-option value="24x36 Black">24x36 Black 20€</ion-option>
-            <ion-option value="24x36 Brown">24x36 Brown 20€</ion-option>
-            <ion-option value="24x36 White">24x36 White 20€</ion-option>
+          <ion-label>Photo{{i+1}}</ion-label>
+          <ion-select block #selectValue (ionChange)="chooseFrame(i,selectValue.value)">
+            <ion-option value="8x10 Black 10">8x10 Black 10€</ion-option>
+            <ion-option value="8x10 White 10">8x10 White 10€</ion-option>
+            <ion-option value="8x10 Brown 10">8x10 Brown 10€</ion-option>
+            <ion-option value="16x20 Black 15">16x20 Black 15€</ion-option>
+            <ion-option value="16x20 White 15">16x20 White 15€</ion-option>
+            <ion-option value="16x20 Brown 15">16x20 Brown 15€</ion-option>
+            <ion-option value="24x36 Black 20">24x36 Black 20€</ion-option>
+            <ion-option value="24x36 Brown 20">24x36 Brown 20€</ion-option>
+            <ion-option value="24x36 White 20">24x36 White 20€</ion-option>
           </ion-select>
         </ion-item>
+        <img [src]="image_uri" />
       </ion-col>
     </ion-row>
   </ion-grid>
