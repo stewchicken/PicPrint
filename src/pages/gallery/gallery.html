@@ -17,16 +17,16 @@
           <ion-select block #selectValue (ionChange)="chooseFrame(i,selectValue.value)">
             <ion-option value="8x10 Black 10">8x10 Black 10€</ion-option>
             <ion-option value="8x10 White 10">8x10 White 10€</ion-option>
-            <ion-option value="8x10 Brown 10">8x10 Brown 10€</ion-option>
+            <ion-option value="8x10 Yellow 10">8x10 Yellow 10€</ion-option>
             <ion-option value="16x20 Black 15">16x20 Black 15€</ion-option>
             <ion-option value="16x20 White 15">16x20 White 15€</ion-option>
-            <ion-option value="16x20 Brown 15">16x20 Brown 15€</ion-option>
+            <ion-option value="16x20 Yellow 15">16x20 Yellow 15€</ion-option>
             <ion-option value="24x36 Black 20">24x36 Black 20€</ion-option>
-            <ion-option value="24x36 Brown 20">24x36 Brown 20€</ion-option>
+            <ion-option value="24x36 Yellow 20">24x36 Yellow 20€</ion-option>
             <ion-option value="24x36 White 20">24x36 White 20€</ion-option>
           </ion-select>
         </ion-item>
-        <img [src]="image_uri" />
+        <img [src]="image_uri" [ngClass]="getFrameClass(i)" />
       </ion-col>
     </ion-row>
   </ion-grid>

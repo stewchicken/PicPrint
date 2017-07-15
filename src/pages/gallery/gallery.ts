@@ -19,32 +19,60 @@ export class GalleryPage {
 
   chooseFrame(index: number, selectValue: string) {
     this.photoFrames[index] = selectValue;
-    /*
-    let alert = this.alertCtrl.create({
-      title: 'index ' + index + "select " + selectValue,
-      subTitle: 'Subtitle',
-      buttons: ['Dismiss']
-    });
-    alert.present();
-    */
+  }
+
+  getFrameClass(index: number) {
+
+    let className:string = this.photoFrames[index];
+
+    if(!className){
+      return "noborderimg";
+    }else if (className.indexOf("Yellow") != -1) {
+      return "yellowborderimg";
+    } else if (className.indexOf("Black") != -1) {
+      return "blackborderimg";
+    } else{
+      return "whiteborderimg";
+    } 
   }
 
   send() {
     let checkmessage = "photo ";
     let notselected = false;
+    let totalPrice: number = 0;
     for (let i = 0; i < this.photoFrames.length; i++) {
       if (!this.photoFrames[i]) {
         notselected = true;
-        checkmessage = checkmessage + (i+1) + " , "
+        checkmessage = checkmessage + (i + 1) + " , "
+      } else {
+        totalPrice = parseInt(this.photoFrames[i].substr(this.photoFrames[i].length - 2)) + totalPrice;
       }
     }
-
     if (notselected) {
       checkmessage = checkmessage + " frame are not  selected !"
 
       let alert = this.alertCtrl.create({
         title: ' select frames ',
         message: checkmessage,
+        buttons: [
+          {
+            text: 'Cancel',
+            role: 'cancel',
+            handler: () => {
+              console.log('Cancel clicked');
+            }
+          }
+        ]
+      });
+      alert.present();
+    } else {
+
+
+      let confirmmessage = " Total Price for " + this.images.length + " photo frames " + totalPrice
+        + " euro";
+      let confirmalert = this.alertCtrl.create({
+        title: ' Confirm to Send  ',
+        message: confirmmessage,
         buttons: [
           {
             text: 'Cancel',
@@ -61,17 +89,11 @@ export class GalleryPage {
           }
         ]
       });
-      alert.present();
+      confirmalert.present();
     }
-
-
-
   }
-
   ionViewDidLoad() {
     this.images = this.navParams.get('images');
     this.photoFrames = Array(this.images.length);
-
   }
-
 }

@@ -59,11 +59,22 @@ You can also test right in the simulator using the cordova commands from the pre
 $ ionic cordova build ios
 $ ionic cordova emulate ios
 
-
-ionic cordova build --release android
+ionic cordova build --dev android //debug 
+ionic cordova build --release android //production
 cp platforms/android/build/outputs/apk/android-release-unsigned.apk .
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.jks  android-release-unsigned.apk  my-alias
 
 /home/yw/Android/Sdk/build-tools/26.0.0/zipalign -v 4 android-release-unsigned.apk  picprint.apk
 
  ionic cordova resources
+
+ adb devices
+
+ionic cordova run android
+
+Using apk: /home/yw/ionic2/PicPrint/platforms/android/build/outputs/apk/android-debug.apk
+
+chrome://inspect/#devices
+
+
+
