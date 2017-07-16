@@ -76,5 +76,5 @@ Using apk: /home/yw/ionic2/PicPrint/platforms/android/build/outputs/apk/android-
 
 chrome://inspect/#devices
 
-
-
+in package.json --dev flag to build debuggable apk
+ //  "ionic:build": "ionic-app-scripts build --dev",
