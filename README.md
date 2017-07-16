@@ -1,11 +1,12 @@
 # PicPrint
 
-``` npm install
+``` 
+npm install
 
-``` ionic cordova build 
+ionic cordova build 
 
-``` ionic cordova run 
-
+ionic cordova run 
+``` 
 
 ## PicPrint is an App
     -to select photo
