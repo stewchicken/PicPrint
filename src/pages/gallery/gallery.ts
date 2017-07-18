@@ -23,17 +23,17 @@ export class GalleryPage {
 
   getFrameClass(index: number) {
 
-    let className:string = this.photoFrames[index];
+    let className: string = this.photoFrames[index];
 
-    if(!className){
+    if (!className) {
       return "noborderimg";
-    }else if (className.indexOf("Yellow") != -1) {
+    } else if (className.indexOf("Yellow") != -1) {
       return "yellowborderimg";
     } else if (className.indexOf("Black") != -1) {
       return "blackborderimg";
-    } else{
+    } else {
       return "whiteborderimg";
-    } 
+    }
   }
 
   send() {
@@ -73,6 +73,31 @@ export class GalleryPage {
       let confirmalert = this.alertCtrl.create({
         title: ' Confirm to Send  ',
         message: confirmmessage,
+        subTitle: 'choose payment',
+        inputs: [
+          {
+            type: 'radio',
+            label: 'paypal',
+            value: 'standard',
+            checked: true
+          },
+          {
+            type: 'radio',
+            label: 'paydirect',
+            value: 'paydirect'
+          },
+          {
+            type: 'radio',
+            label: 'sofortüberweisung',
+            value: 'sofortüberweisung'
+          },
+          {
+            type: 'radio',
+            label: 'Bank transfer',
+            value: 'Bank transfer'
+          }
+        ],
+
         buttons: [
           {
             text: 'Cancel',
@@ -85,6 +110,9 @@ export class GalleryPage {
             text: 'Buy',
             handler: () => {
               console.log('Buy clicked');
+              this.images = null;
+              this.photoFrames = null;
+              this.navCtrl.push('CheckoutPage');
             }
           }
         ]
@@ -94,6 +122,8 @@ export class GalleryPage {
   }
   ionViewDidLoad() {
     this.images = this.navParams.get('images');
-    this.photoFrames = Array(this.images.length);
+    if (this.images) {
+      this.photoFrames = Array(this.images.length);
+    }
   }
 }
