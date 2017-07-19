@@ -66,8 +66,6 @@ export class GalleryPage {
       });
       alert.present();
     } else {
-
-
       let confirmmessage = " Total Price for " + this.images.length + " photo frames " + totalPrice
         + " euro";
       let confirmalert = this.alertCtrl.create({
