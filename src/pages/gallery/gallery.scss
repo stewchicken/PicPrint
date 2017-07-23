@@ -9,12 +9,64 @@ page-gallery {
     padding: 1px;
 }
 
+.blackborderimg-small { 
+    border: 15px solid black;
+    padding: 1px;
+    width: 60%;
+    height: 60%
+}
+
+.blackborderimg-middle { 
+    border: 15px solid black;
+    padding: 1px;
+    width: 80%;
+    height: 80%
+}
+
+.blackborderimg-large { 
+    border: 15px solid black;
+    padding: 1px;
+}
+
 .yellowborderimg { 
     border: 15px solid yellow;
     padding: 1px;
 }
 
-.whiteborderimg { 
+.yellowborderimg-small { 
+    border: 15px solid yellow;
+    padding: 1px;
+    width: 60%;
+    height: 60%
+}
+
+.yellowborderimg-middle{ 
+    border: 15px solid yellow;
+    padding: 1px;
+    width: 80%;
+    height: 80%
+}
+
+.yellowborderimg-large{ 
+    border: 15px solid yellow;
+    padding: 1px;
+}
+
+.whiteborderimg-small{ 
+    border: 15px solid white;
+    padding: 1px;
+    width: 60%;
+    height: 60%
+}
+
+.whiteborderimg-middle{ 
+    border: 15px solid white;
+    padding: 1px;
+    width: 80%;
+    height: 80%
+}
+
+.whiteborderimg-large{ 
     border: 15px solid white;
     padding: 1px;
 }
@@ -22,6 +74,6 @@ page-gallery {
 .noborderimg { 
     border: 0px;
     padding: 0px;
+    width: 80%;
+    height: 80%
 }
-
-
