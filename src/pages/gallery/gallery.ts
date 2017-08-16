@@ -27,25 +27,25 @@ export class GalleryPage {
 
     if (!className) {
       return "noborderimg";
-    } else if (className.indexOf("Yellow") != -1&&className.indexOf("Small") != -1) {
+    } else if (className.indexOf("Yellow") != -1 && className.indexOf("Small") != -1) {
       return "yellowborderimg-small";
-    } else if (className.indexOf("Yellow") != -1&&className.indexOf("Middle") != -1) {
+    } else if (className.indexOf("Yellow") != -1 && className.indexOf("Middle") != -1) {
       return "yellowborderimg-middle";
-    } else if (className.indexOf("Yellow") != -1&&className.indexOf("Large") != -1) {
+    } else if (className.indexOf("Yellow") != -1 && className.indexOf("Large") != -1) {
       return "yellowborderimg-large";
-    } else if (className.indexOf("Black") != -1&&className.indexOf("Small") != -1) {
+    } else if (className.indexOf("Black") != -1 && className.indexOf("Small") != -1) {
       return "blackborderimg-small";
-    }else if (className.indexOf("Black") != -1&&className.indexOf("Middle") != -1) {
+    } else if (className.indexOf("Black") != -1 && className.indexOf("Middle") != -1) {
       return "blackborderimg-middle";
-    }else if (className.indexOf("Black") != -1&&className.indexOf("Large") != -1) {
+    } else if (className.indexOf("Black") != -1 && className.indexOf("Large") != -1) {
       return "blackborderimg-large";
-    }else if (className.indexOf("White") != -1&&className.indexOf("Small") != -1) {
+    } else if (className.indexOf("White") != -1 && className.indexOf("Small") != -1) {
       return "whiteborderimg-small";
-    }else if (className.indexOf("White") != -1&&className.indexOf("Middle") != -1) {
+    } else if (className.indexOf("White") != -1 && className.indexOf("Middle") != -1) {
       return "whiteborderimg-middle";
-    }else if (className.indexOf("White") != -1&&className.indexOf("Large") != -1) {
+    } else if (className.indexOf("White") != -1 && className.indexOf("Large") != -1) {
       return "whiteborderimg-large";
-    } 
+    }
   }
 
   send() {

@@ -1,5 +1,8 @@
 {
   "name": "PicPrint",
-  "app_id": "758c2468",
-  "type": "ionic-angular"
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }
